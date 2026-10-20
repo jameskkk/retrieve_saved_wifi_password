@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saved-wifi-passwords"
+version = "0.1.0"
+description = "Retrieve Wi-Fi passwords saved on macOS, Ubuntu, and Windows"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "John" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+]
+
+[project.scripts]
+wifi-passwords = "wifi_passwords.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["wifi_passwords*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
