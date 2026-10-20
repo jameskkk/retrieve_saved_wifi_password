@@ -22,6 +22,26 @@ For development without installing:
 python3 -m wifi_passwords list
 ```
 
+## Desktop GUI
+
+Run the standalone Tkinter interface directly from the repository root:
+
+```bash
+python3 main.py
+```
+
+The GUI lists saved networks without requesting their credentials. Select a
+network and click **取得選取的密碼** to retrieve only that password. Passwords
+remain masked until **顯示** is selected, and copying to the clipboard requires
+an explicit click.
+
+Tkinter is included with the standard Windows and most macOS Python installers.
+On a minimal Ubuntu installation, add it with:
+
+```bash
+sudo apt install python3-tk
+```
+
 ## Usage
 
 List saved networks without revealing passwords:
